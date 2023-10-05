@@ -6,6 +6,7 @@
     "node": "18.16.0"
   },
   "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
