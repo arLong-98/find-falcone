@@ -10,7 +10,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,html,css,json}": ["yarn prettier --write"]
+    "**/*.{js,jsx,ts,tsx,html,css,json}": [
+      "pnpm prettier --write"
+    ]
   },
   "dependencies": {
     "next": "13.5.4",
