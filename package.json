@@ -11,7 +11,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier --write"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,html,css,json}": [
