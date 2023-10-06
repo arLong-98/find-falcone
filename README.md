@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## DEV SETUP
+
+- add husky for git hoks, add commitlint to commit-msg hook, list-staged to pre-commit hook
+- add prettier, eslint-config-prettier
+- add prettier-plugin-tailwind to sort tailwind classes
+- added nvmrc file, engines in package.json for engine locking
+
+// build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm, eslint, prettier, commitlint etc)
+// ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+// docs: Documentation only changes
+// feat: A new feature
+// fix: A bug fix
+// perf: A code change that improves performance
+// refactor: A code change that neither fixes a bug nor adds a feature
+// style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+// test: Adding missing tests or correcting existing tests
