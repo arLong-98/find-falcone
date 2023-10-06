@@ -1,6 +1,4 @@
-import ResetButton from './ResetButton';
-
-export interface HeaderProps {}
+import ResetButton from '@/components/ui/ResetButton';
 
 const Header: React.FC<HeaderProps> = () => {
   return (
@@ -12,5 +10,7 @@ const Header: React.FC<HeaderProps> = () => {
     </header>
   );
 };
+
+export interface HeaderProps {}
 
 export default Header;

@@ -1,8 +1,6 @@
 'use client';
 
-import Button from '../input/Button';
-
-export interface ResetButtonProps {}
+import Button from '@/components/input/Button';
 
 const ResetButton: React.FC<ResetButtonProps> = () => {
   function resetState() {
@@ -10,5 +8,7 @@ const ResetButton: React.FC<ResetButtonProps> = () => {
   }
   return <Button onClick={resetState}>Reset</Button>;
 };
+
+export interface ResetButtonProps {}
 
 export default ResetButton;

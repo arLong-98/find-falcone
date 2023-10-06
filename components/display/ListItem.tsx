@@ -1,11 +1,5 @@
 'use client';
 
-export interface ListItemProps {
-  label: string;
-  id: string | number;
-  onClick: (label: string, id: string | number) => void;
-}
-
 const ListItem: React.FC<ListItemProps> = ({ label, id, onClick }) => {
   function handleClick() {
     onClick(label, id);
@@ -17,5 +11,11 @@ const ListItem: React.FC<ListItemProps> = ({ label, id, onClick }) => {
     </li>
   );
 };
+
+export interface ListItemProps {
+  label: string;
+  id: string | number;
+  onClick: (label: string, id: string | number) => void;
+}
 
 export default ListItem;

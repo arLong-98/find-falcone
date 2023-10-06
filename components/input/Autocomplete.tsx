@@ -1,19 +1,8 @@
 'use client';
 
-import { ChangeEvent, useEffect, useMemo, useState } from 'react';
-import ListItem from '../display/ListItem';
-import Icon from '../display/icons';
-
-export interface AutocompleteProps {
-  options: Array<optionItem>;
-  placeholder: string;
-  onSelect: (props: optionItem) => void;
-}
-
-type optionItem = {
-  label: string;
-  id: string | number;
-};
+import ListItem from '@/components/display/ListItem';
+import Icon from '@/components/display/icons';
+import { ChangeEvent, useMemo, useState } from 'react';
 
 const Autocomplete: React.FC<AutocompleteProps> = ({
   options,
@@ -22,21 +11,15 @@ const Autocomplete: React.FC<AutocompleteProps> = ({
 }) => {
   const [showOptions, setShowOptions] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
-  const [selectedOption, setSelectedOption] = useState<number | string>();
-
-  useEffect(() => {
-    if (selectedOption) {
-      handleBlur();
-    }
-  }, [selectedOption]);
+  const [, setSelectedOption] = useState<number | string>();
 
   function handleFocus() {
     setShowOptions(true);
   }
 
-  function handleBlur() {
-    setShowOptions(false);
-  }
+  // function handleBlur() {
+  //   setShowOptions(false);
+  // }
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setInputValue(event.target.value);
@@ -92,6 +75,17 @@ const Autocomplete: React.FC<AutocompleteProps> = ({
       )}
     </div>
   );
+};
+
+export interface AutocompleteProps {
+  options: Array<optionItem>;
+  placeholder: string;
+  onSelect: (props: optionItem) => void;
+}
+
+export type optionItem = {
+  label: string;
+  id: string | number;
 };
 
 export default Autocomplete;

@@ -1,10 +1,5 @@
 import clsx from 'clsx';
 
-export interface SafeWidthContainerProps {
-  children: React.ReactNode;
-  className?: string | Array<string>;
-}
-
 const SafeWidthContainer: React.FC<SafeWidthContainerProps> = ({
   children,
   className,
@@ -20,5 +15,10 @@ const SafeWidthContainer: React.FC<SafeWidthContainerProps> = ({
     </div>
   );
 };
+
+export interface SafeWidthContainerProps {
+  children: React.ReactNode;
+  className?: string | Array<string>;
+}
 
 export default SafeWidthContainer;
